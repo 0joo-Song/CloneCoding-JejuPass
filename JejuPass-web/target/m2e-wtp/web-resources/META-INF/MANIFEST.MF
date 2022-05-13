@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Build-Jdk-Spec: 16
-Implementation-Title: withere-admin
+Implementation-Title: jejuPass-web
 Implementation-Version: 0.9.1-SNAPSHOT
 Created-By: Maven Integration for Eclipse
 

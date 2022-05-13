@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WithereApplication {
+public class JejuPassApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WithereApplication.class, args);
+		SpringApplication.run(JejuPassApplication.class, args);
 	}
 
 }

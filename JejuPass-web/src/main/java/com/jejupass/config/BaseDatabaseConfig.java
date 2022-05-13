@@ -16,45 +16,45 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@MapperScan(basePackages={"com.withere"})
+@MapperScan(basePackages={"com.jejupass"})
 @EnableTransactionManagement
 @Configuration
 public class BaseDatabaseConfig {
 
-	@Qualifier("transactionManager.withere")
+	@Qualifier("transactionManager.jejupass")
 	DataSourceTransactionManager transactionManager;
 	
-    @Bean(name="dataSource.withere")
+    @Bean(name="dataSource.jejupass")
     @Primary
-    @ConfigurationProperties(prefix = "spring.datasource.withere")
+    @ConfigurationProperties(prefix = "spring.datasource.jejupass")
     public DataSource dataSourceSKIct(){
         return DataSourceBuilder.create()
                 .type(HikariDataSource.class)
                 .build();
     }
 
-    @Bean(name="sqlSessionFactory.withere")
+    @Bean(name="sqlSessionFactory.jejupass")
     @Primary
-    public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource.withere") DataSource dataSource) throws Exception {
+    public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource.jejupass") DataSource dataSource) throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         sessionFactory.setMapperLocations(resolver.getResources("classpath:mapper/**/*Mapper.xml"));
-        sessionFactory.setTypeAliasesPackage("com.withere"); // Alias 어노테이션 경로 설정
+        sessionFactory.setTypeAliasesPackage("com.jejupass"); // Alias 어노테이션 경로 설정
         return sessionFactory.getObject();
     }
 
-    @Bean(name="sqlSessionTemplate.withere")
+    @Bean(name="sqlSessionTemplate.jejupass")
     @Primary
-    public SqlSessionTemplate sqlSessionTemplate(@Qualifier("sqlSessionFactory.withere")SqlSessionFactory sqlSessionFactory) throws Exception {
+    public SqlSessionTemplate sqlSessionTemplate(@Qualifier("sqlSessionFactory.jejupass")SqlSessionFactory sqlSessionFactory) throws Exception {
         final SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
         sqlSessionTemplate.getConfiguration().setMapUnderscoreToCamelCase(true);	// camel 표기법 변경
         return sqlSessionTemplate;
     }
 
-    @Bean(name="transactionManager.withere")
+    @Bean(name="transactionManager.jejupass")
     @Primary
-    public DataSourceTransactionManager transactionManager (@Qualifier("dataSource.withere") DataSource dataSource) throws Exception {
+    public DataSourceTransactionManager transactionManager (@Qualifier("dataSource.jejupass") DataSource dataSource) throws Exception {
         DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(dataSource);
         return transactionManager;
     }

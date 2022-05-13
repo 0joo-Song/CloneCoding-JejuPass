@@ -1,11 +1,11 @@
 # base
 spring: 
   datasource: 
-    withere: 
+    jejupass: 
       driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-      jdbc-url: jdbc:log4jdbc:mariadb://database-dev.cg5icvjspnbb.ap-northeast-2.rds.amazonaws.com:3306/withere_db?characterEncoding=utf-8&serverTimezone=UTC
-      username: withere_svc
-      password: dnleldj12#$
+      jdbc-url: jdbc:log4jdbc:mariadb://34.64.232.46:3306/dh_odp_db?characterEncoding=utf-8&serverTimezone=UTC 
+      username: root
+      password: dudwndkfma1@
       
   servlet: 
     multipart: 
@@ -21,6 +21,6 @@ spring:
 file:
   upload:
     #upload path (local path)
-    path: C:/withere/upfile 
+    path: C:/jejupass/upfile 
     #upload url
     url: /upfile      
