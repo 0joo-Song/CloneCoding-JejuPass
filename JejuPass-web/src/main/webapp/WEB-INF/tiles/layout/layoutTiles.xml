@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- ======================================================================== -->
+	<!-- 페이지 레이아웃 : blank -->
+	<!-- ======================================================================== -->
+	
+	<!-- default:blank -->
+	<definition name="blank:**" template="/WEB-INF/views/{1}.jsp">
+	</definition>
+    
+	<!-- ======================================================================== -->
+	<!-- 페이지 레이아웃 : 기본 WEB -->
+	<!-- ======================================================================== -->
+	
+	<!-- base layout -->
+	<definition name="base-layout" template="/WEB-INF/views/layout/layoutWeb.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/include/incHeader.jsp" />
+		<put-attribute name="gnb" value="/WEB-INF/views/include/incGnb.jsp" />  
+		<put-attribute name="contents" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/incFooter.jsp" />
+	</definition>
+	
+	<!-- base page 1 -->   
+	<definition name="*" extends="base-layout">
+		<put-attribute name="contents" value="/WEB-INF/views/{1}.jsp" />
+	</definition>
+	
+	<!-- base page 2 -->
+	<definition name="*/*" extends="base-layout">
+		<put-attribute name="contents" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+	
+	<!-- base page 3 -->
+	<definition name="*/*/*" extends="base-layout">
+		<put-attribute name="contents" value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+	</definition>
+	
+	
+</tiles-definitions>

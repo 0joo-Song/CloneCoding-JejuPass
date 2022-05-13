@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <property name="LOGS" value="/www/logs/appLogs"/>
+
+    <springProfile name="default">
+        <appender name ="CONSOLE"
+                class="ch.qos.logback.core.ConsoleAppender">
+            <encoder
+                    class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <Pattern>${CONSOLE_LOG_PATTERN}</Pattern>
+            </encoder>
+        </appender>
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"></appender-ref>
+        </root>
+    </springProfile>
+
+    <springProfile name="env">
+        <appender name ="RollingFile"
+            class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <encoder
+                class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <Pattern>${FILE_LOG_PATTERN}</Pattern>
+            </encoder>
+
+            <rollingPolicy
+                class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${LOGS}/console-odp-%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>30</maxHistory>
+            </rollingPolicy>
+        </appender>
+        <root level="info">
+            <appender-ref ref="RollingFile"></appender-ref>
+        </root>
+    </springProfile>
+
+    <logger name="jdbc" level="OFF"/>
+    <logger name="jdbc.sqlonly" level="OFF"/>
+    <logger name="jdbc.sqltiming" level="DEBUG"/>
+    <logger name="jdbc.audit" level="OFF"/>
+    <logger name="jdbc.resultset" level="OFF"/>
+    <logger name="jdbc.resultsettable" level="DEBUG"/>
+    <logger name="jdbc.connection" level="OFF"/>
+
+</configuration>

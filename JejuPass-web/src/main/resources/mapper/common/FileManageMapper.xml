@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.withere.admin.comm.mapper.FileManageMapper">
+
+	<!-- 첨부 파일 리스트 조회 -->
+    <select id="selectAtchFileList" parameterType="FileManageReqDto" resultType="FileManageRespDto">
+        SELECT
+			ATCH_FILE_DTL_SEQ
+			, ATCH_FILE_SEQ
+			, ORI_FILE_NM
+			, FILE_SIZE
+			, FILE_URL
+		FROM TB_ATCH_FILE_DTL
+		WHERE ATCH_FILE_SEQ =  #{atchFileSeq}
+	</select>
+
+	<!-- 첨부 파일 상세 조회 -->
+    <select id="selectAtchFileDetailInfo" parameterType="FileManageReqDto" resultType="FileManageRespDto">
+        SELECT
+			ATCH_FILE_DTL_SEQ
+			, ATCH_FILE_SEQ
+			, ORI_FILE_NM
+			, FILE_SIZE
+			, FILE_URL
+		FROM TB_ATCH_FILE_DTL
+		WHERE ATCH_FILE_SEQ = #{atchFileSeq}
+	</select>
+
+	<!-- 파일 일련번호 생성 및 조회 11 -->
+	<insert id="insertAtchFileSeq" parameterType="AtchFileDto">
+		INSERT INTO TB_ATCH_FILE VALUE (NULL);
+		<selectKey keyProperty="atchFileSeq" resultType="int" order="AFTER">
+			SELECT LAST_INSERT_ID() AS atchFileSeq
+		</selectKey>
+	</insert>
+
+	<!-- 파일별 상세 정보 입력 -->
+	<insert id="insertAtchFileDetail" parameterType="FileManageReqDto">
+		INSERT INTO TB_ATCH_FILE_DTL
+		(
+			ATCH_FILE_SEQ
+			, ORI_FILE_NM
+			, FILE_SIZE
+			, CHG_FILE_NM
+			, FILE_URL
+		)
+		VALUES
+		(
+			#{atchFileSeq}
+			, #{oriFileNm}
+			, #{fileSize}
+			, #{chgFileNm}
+			, #{fileUrl}
+		)
+	</insert>
+
+	<!-- 첨부 파일 상세 삭제 -->
+	<delete id="deleteAtchFileDetailInfo" parameterType="FileManageRespDto">
+		DELETE FROM TB_ATCH_FILE_DTL
+		WHERE ATCH_FILE_DTL_SEQ = #{atchFileDtlSeq}
+	</delete>
+
+</mapper>

@@ -1,0 +1,26 @@
+# base
+spring: 
+  datasource: 
+    withere: 
+      driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+      jdbc-url: jdbc:log4jdbc:mariadb://database-dev.cg5icvjspnbb.ap-northeast-2.rds.amazonaws.com:3306/withere_db?characterEncoding=utf-8&serverTimezone=UTC
+      username: withere_svc
+      password: dnleldj12#$
+      
+  servlet: 
+    multipart: 
+      enabled: true 
+      maxFileSize: 1000MB
+      maxRequestSize: 1000MB
+
+#introPage
+  webservice:
+    intro: index.do
+
+# file
+file:
+  upload:
+    #upload path (local path)
+    path: C:/withere/upfile 
+    #upload url
+    url: /upfile      

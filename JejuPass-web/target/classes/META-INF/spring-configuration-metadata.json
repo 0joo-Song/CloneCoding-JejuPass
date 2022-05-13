@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.withere",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.jejupass.config.BaseDatabaseConfig",
+      "sourceMethod": "public javax.sql.DataSource dataSourceSKIct() "
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
