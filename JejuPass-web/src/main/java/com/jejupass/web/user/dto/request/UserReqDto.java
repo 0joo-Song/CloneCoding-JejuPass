@@ -12,4 +12,9 @@ import lombok.ToString;
 @Alias("UserReqDto")
 public class UserReqDto {
 	private Integer userSeq;
+	private String userId;
+	private String userPw;
+	private String encPw;
+	private String userNm;
+	
 }
