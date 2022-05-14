@@ -16,5 +16,7 @@ public class UserReqDto {
 	private String userPw;
 	private String encPw;
 	private String userNm;
+	private String userTel;
+	private String userEmail;
 	
 }
