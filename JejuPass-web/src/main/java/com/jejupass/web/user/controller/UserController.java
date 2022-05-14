@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jejupass.common.constants.ResultCode;
 import com.jejupass.common.utils.EncryptUtil;
+import com.jejupass.common.utils.StringUtil;
 import com.jejupass.web.user.dto.request.UserReqDto;
 import com.jejupass.web.user.dto.response.UserRespDto;
 import com.jejupass.web.user.vo.UserVO;
@@ -104,4 +105,86 @@ public class UserController {
         return "redirect:/index.do"; 
     }
     
+    
+    /**
+     * 회원가입
+     * @param userReqDto
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value="/user/joinUser.do", method = {RequestMethod.GET, RequestMethod.POST})
+    public String join(UserReqDto userReqDto) throws Exception {
+    	/*
+    	//비밀번호 암호화
+    	userReqDto.setEncPw(EncryptUtil.encryptPW(userReqDto.getUserPw()));
+    	userReqDto.setUserApiKey(EncryptUtil.encryptSHA256(userReqDto.getUserId()+StringUtil.getRandomString(4, "T"))); // User Api Key 추가 
+    	userService.insertUser(userReqDto);
+    	
+    	// OAuth 인증 정보 생성 
+    	oauthProcService.createUserOAuth(userReqDto);
+    	log.info("userReqDto=>>"+userReqDto);
+    	*/
+    	
+        return "web/user/joinResult";
+    }
+    
+    /**
+     * 이메일 중복 체크 및 인증코드 보내기
+     * @param userReqDto
+     * @param request
+     * @return
+     * @throws Exception
+     */
+    @ResponseBody
+    @RequestMapping(value="/user/checkDupEmail.do", method = {RequestMethod.GET, RequestMethod.POST})
+    public String checkDupEmail(UserReqDto userReqDto, HttpServletRequest request) throws Exception {
+    	log.info("check dup email => "+userReqDto);
+    	String result = null;
+    	/*
+    	int cnt = userService.selectDupUserId(userReqDto);
+    	if (cnt == 0) {
+    		// 이메일로 인증보드 보내기
+    		MailInfoVO mailInfoVO  = MailInfoVO.builder()
+    				.emailType(EmailType.EMAIL_AUTH)
+    				.rcvMailAddress(userReqDto.getUserId().toString())
+    				.authCode(StringUtil.getRandomString(6, "N"))
+    				.emailFormPath(request.getSession().getServletContext().getRealPath("/mail"))
+    				.build();
+        	// 메일보내기
+        	mailService.mailSend(mailInfoVO);
+        	
+        	// 인증코드 테이블 저장
+        	userService.insertAuthCode(mailInfoVO);
+        	
+        	result = ResultCode.RESULT_SUCCESS.getCode();
+        	
+    	} else {
+    		result = ResultCode.RESULT_FAIL.getCode();
+    	}
+    	*/
+        return result;
+    }
+    
+    /**
+     * 인증번호 확인
+     * @param userReqDto
+     * @return
+     * @throws Exception
+     */
+    @ResponseBody
+    @RequestMapping(value="/user/checkAuthCode.do", method = {RequestMethod.GET, RequestMethod.POST})
+    public String checkAuthCode(UserReqDto userReqDto) throws Exception {
+    	String result = null;
+    	/*
+    	int cnt = userService.selectAuthCode(userReqDto);
+    	
+    	if(cnt == 1) {
+    		result = ResultCode.RESULT_SUCCESS.getCode();
+    	} else {
+    		result = ResultCode.RESULT_FAIL.getCode();
+    	}
+    	*/
+    	
+        return result;
+    }
 }
