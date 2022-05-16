@@ -16,4 +16,6 @@ public class RntcReqDto {
 	private String endDt;
 	private String startTime;
 	private String endTime;
+	private String test; // 나중에 삭제
+	
 }	
