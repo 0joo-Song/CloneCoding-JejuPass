@@ -6,8 +6,8 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum ResultCode {
-	SUCCESS("success"),
-	FAIL("fail");	
+	RESULT_SUCCESS("success"),
+	RESULT_FAIL("fail");	
 	
 	String code;  
 	
