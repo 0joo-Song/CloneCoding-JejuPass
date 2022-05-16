@@ -11,5 +11,5 @@ import lombok.ToString;
 @ToString
 @Alias("AflfRespDto")
 public class AflfRespDto {
-
+	
 }
