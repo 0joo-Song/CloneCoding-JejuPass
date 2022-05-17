@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jejupass.web.main.mapper.MainMapper">
+	<insert id="test" parameterType="CommCdReqDto">
+	 INSERT INTO TB_COMM_CD(
+	 	COMM_CD
+	 	,PARENT_CD
+	 	,CD_NAME
+	 	,CD_DESC
+	 )
+	 VALUES(
+	 	'TEST'
+	 	,''
+	 	,'TEST NAME'
+	 	,'TEST DESC'
+	 )
+	</insert>
+
+</mapper>
