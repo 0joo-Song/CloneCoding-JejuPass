@@ -25,7 +25,7 @@ public class MainController {
 	 * @return
 	 * @throws Exception
 	 */
-	@RequestMapping(value = "/", method = { RequestMethod.GET, RequestMethod.POST })
+	@RequestMapping(value = "/index.do", method = { RequestMethod.GET, RequestMethod.POST })
 		public String mainIndex() throws Exception {
 		return "web/index";
 	}
