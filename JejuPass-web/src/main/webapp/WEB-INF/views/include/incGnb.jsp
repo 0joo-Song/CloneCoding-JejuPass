@@ -38,7 +38,7 @@
                 </div>
                 <div class="user_btn user_box_2">
                     <p><a href="#">이벤트</a></p>
-                    <p><a href="#">고객센터</a></p>
+                    <p><a href="/cstmSvc/notice.do">고객센터</a></p>
                 </div>
             </div>
 	</div>

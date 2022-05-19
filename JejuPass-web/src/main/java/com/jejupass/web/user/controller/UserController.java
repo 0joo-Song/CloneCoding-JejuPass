@@ -57,7 +57,7 @@ public class UserController {
  	@RequestMapping(value="/user/userLogin.do", method = {RequestMethod.GET, RequestMethod.POST})
  	public UserRespDto userLogin(UserReqDto userReqDto, HttpSession session, UserVO userVO) throws Exception {
  		
- 		log.info("============ ODP USER LOGIN ============");
+ 		log.info("============ USER LOGIN ============");
  		UserRespDto userRespDto = new UserRespDto();
  		
  		if(session.getAttribute("userLogin") != null) {

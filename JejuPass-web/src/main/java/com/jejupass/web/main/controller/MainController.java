@@ -38,5 +38,5 @@ public class MainController {
 		testCd.setCdDesc("저장 테스트");
 		int check = mainService.test(testCd);
 	return "redirect:/";
-}
+	}
 }
