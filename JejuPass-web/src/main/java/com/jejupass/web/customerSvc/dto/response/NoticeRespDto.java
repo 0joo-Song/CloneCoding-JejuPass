@@ -1,6 +1,10 @@
 package com.jejupass.web.customerSvc.dto.response;
 
+import java.util.List;
+
 import org.apache.ibatis.type.Alias;
+
+import com.jejupass.web.customerSvc.entity.NoticeEntity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,11 +15,5 @@ import lombok.ToString;
 @ToString
 @Alias("NoticeRespDto")
 public class NoticeRespDto {
-	private Integer noticeSeq;
-	private String noticeType;
-	private String title;
-	private String contents;
-	private String regDt;
-	private String showYn;
-	private Integer atchFileSeq;
+	private List<NoticeEntity> respData;
 }
