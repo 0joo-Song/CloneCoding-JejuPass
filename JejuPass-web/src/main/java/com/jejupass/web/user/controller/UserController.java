@@ -1,5 +1,6 @@
 package com.jejupass.web.user.controller;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -11,11 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jejupass.common.constants.ResultCode;
 import com.jejupass.common.utils.EncryptUtil;
-import com.jejupass.common.utils.StringUtil;
 import com.jejupass.web.user.dto.request.UserReqDto;
 import com.jejupass.web.user.dto.response.UserRespDto;
+import com.jejupass.web.user.service.UserService;
 import com.jejupass.web.user.vo.UserVO;
 
 @Controller
@@ -23,6 +23,8 @@ public class UserController {
 	
 	Logger log = LoggerFactory.getLogger(UserController.class);
     
+	@Resource(name="userService")
+	private UserService userService;	
 	/**
 	 * 로그인 페이지
 	 * @param model
@@ -58,7 +60,7 @@ public class UserController {
  	public UserRespDto userLogin(UserReqDto userReqDto, HttpSession session, UserVO userVO) throws Exception {
  		
  		log.info("============ USER LOGIN ============");
- 		UserRespDto userRespDto = new UserRespDto();
+ 		UserRespDto resp = new UserRespDto();
  		
  		if(session.getAttribute("userLogin") != null) {
  			session.removeAttribute("userLogin");
@@ -71,7 +73,7 @@ public class UserController {
  		} else {
  			userReqDto.setEncPw(EncryptUtil.encryptPW(userReqDto.getUserPw()));
  		}
- 		/* 22-05-14 : dto다 완성되고 작업
+ 		
  		userVO = userService.login(userReqDto);
  	
  		if(userVO != null) {
@@ -79,18 +81,20 @@ public class UserController {
  			// 마지막 로그인 시간 저장
  			userService.updateLastLoginDate(userVO);
  			
+ 			/* userEntity로 수정하기
  			userRespDto.setResult(ResultCode.RESULT_SUCCESS.getCode());
  			userRespDto.setTempPwYn(userVO.getTempPwYn());
  			userRespDto.setUserSeq(userVO.getUserSeq());
+ 			*/
 
  	    	
  		} else {
+ 			/* userEntity로 수정하기
  			userRespDto.setResult(ResultCode.RESULT_FAIL.getCode());
+ 			*/
  		}
- 		*/
  		
- 		return userRespDto;
- 		
+ 		return resp;
     }
    
     /**
@@ -119,11 +123,12 @@ public class UserController {
     	userReqDto.setEncPw(EncryptUtil.encryptPW(userReqDto.getUserPw()));
     	userReqDto.setUserApiKey(EncryptUtil.encryptSHA256(userReqDto.getUserId()+StringUtil.getRandomString(4, "T"))); // User Api Key 추가 
     	userService.insertUser(userReqDto);
+    	*/
     	
     	// OAuth 인증 정보 생성 
-    	oauthProcService.createUserOAuth(userReqDto);
+    	//oauthProcService.createUserOAuth(userReqDto);
     	log.info("userReqDto=>>"+userReqDto);
-    	*/
+    	
     	
         return "web/user/joinResult";
     }
@@ -140,8 +145,8 @@ public class UserController {
     public String checkDupEmail(UserReqDto userReqDto, HttpServletRequest request) throws Exception {
     	log.info("check dup email => "+userReqDto);
     	String result = null;
-    	/*
     	int cnt = userService.selectDupUserId(userReqDto);
+    	/*
     	if (cnt == 0) {
     		// 이메일로 인증보드 보내기
     		MailInfoVO mailInfoVO  = MailInfoVO.builder()
