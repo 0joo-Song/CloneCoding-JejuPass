@@ -67,11 +67,11 @@ public class UserController {
  		}
  		
  		// 비밀번호 암호화
- 		if(userReqDto.getUserPw().equals("-")) {
+ 		if(userReqDto.getReqData().getUserPw().equals("-")) {
  			// 탈퇴한 회원의 비번은 암호화 하지 않고 '-' 값 그대로 설정
- 			userReqDto.setEncPw(userReqDto.getUserPw());
+ 			userReqDto.getReqData().setEncPw(userReqDto.getReqData().getUserPw());
  		} else {
- 			userReqDto.setEncPw(EncryptUtil.encryptPW(userReqDto.getUserPw()));
+ 			userReqDto.getReqData().setEncPw(EncryptUtil.encryptPW(userReqDto.getReqData().getUserPw()));
  		}
  		
  		userVO = userService.login(userReqDto);
