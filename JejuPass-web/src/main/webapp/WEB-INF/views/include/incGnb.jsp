@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" isELIgnored="false"%>
 	<!-- #header -->
 	<div id="header">
-		 <div class="logo">
+		  <div class="logo">
                 <img src="/assets/image/logo.png" alt="">
             </div>
             <div class="nav">
