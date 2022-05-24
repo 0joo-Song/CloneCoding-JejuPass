@@ -33,7 +33,7 @@
             </div>
             <div class="user_btn_box">
                 <div class="user_btn user_box_1">
-                    <p><a href="#">로그인</a></p>
+                    <p><a href="/user/login.do">로그인</a></p>
                     <p><a href="#">주문조회</a></p>
                 </div>
                 <div class="user_btn user_box_2">

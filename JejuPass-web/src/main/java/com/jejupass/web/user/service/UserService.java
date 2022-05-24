@@ -1,11 +1,13 @@
 package com.jejupass.web.user.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.jejupass.web.user.dto.request.UserReqDto;
 import com.jejupass.web.user.mapper.UserMapper;
 import com.jejupass.web.user.vo.UserVO;
 
+@Service
 public class UserService {
 
 	@Autowired

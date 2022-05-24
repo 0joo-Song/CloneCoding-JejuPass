@@ -3,7 +3,7 @@
 
 <input type="text" id="userId" name="userId" class="item-input" placeholder="아이디(이메일)">
 <input type="password" onkeyup="enterkey();" id="userPw" name="userPw" class="item-input" placeholder="비밀번호">
-
+<button onclick="login()">로그인</button>
 <script type="text/javascript">
 
 	// 엔터로 로그인
