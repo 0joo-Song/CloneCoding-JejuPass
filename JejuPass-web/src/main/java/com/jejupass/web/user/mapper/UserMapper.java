@@ -9,4 +9,6 @@ public interface UserMapper {
 
 	int selectDupUserId(UserReqDto userReqDto);
 
+	void updateLastLoginDate(UserVO userVO);
+
 }

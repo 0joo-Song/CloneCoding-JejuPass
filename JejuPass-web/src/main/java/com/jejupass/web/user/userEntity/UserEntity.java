@@ -22,4 +22,5 @@ public class UserEntity {
 	private String userNm;
 	private String userTel;
 	private String userEmail;
+	private String tempPwYn;
 }

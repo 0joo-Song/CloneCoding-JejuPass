@@ -14,4 +14,7 @@ import lombok.ToString;
 @Alias("UserRespDto")
 public class UserRespDto {
 	private UserEntity respData;
+	
+	private String result;
+	
 }

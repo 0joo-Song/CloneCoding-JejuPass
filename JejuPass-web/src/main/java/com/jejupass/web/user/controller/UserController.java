@@ -58,42 +58,7 @@ public class UserController {
 	@ResponseBody
  	@RequestMapping(value="/user/userLogin.do", method = {RequestMethod.GET, RequestMethod.POST})
  	public UserRespDto userLogin(UserReqDto userReqDto, HttpSession session, UserVO userVO) throws Exception {
- 		
- 		log.info("============ USER LOGIN ============");
- 		UserRespDto resp = new UserRespDto();
- 		
- 		if(session.getAttribute("userLogin") != null) {
- 			session.removeAttribute("userLogin");
- 		}
- 		
- 		// 비밀번호 암호화
- 		if(userReqDto.getReqData().getUserPw().equals("-")) {
- 			// 탈퇴한 회원의 비번은 암호화 하지 않고 '-' 값 그대로 설정
- 			userReqDto.getReqData().setEncPw(userReqDto.getReqData().getUserPw());
- 		} else {
- 			userReqDto.getReqData().setEncPw(EncryptUtil.encryptPW(userReqDto.getReqData().getUserPw()));
- 		}
- 		
- 		userVO = userService.login(userReqDto);
- 	
- 		if(userVO != null) {
- 			session.setAttribute("userLogin", userVO);		
- 			// 마지막 로그인 시간 저장
- 			userService.updateLastLoginDate(userVO);
- 			
- 			/* userEntity로 수정하기
- 			userRespDto.setResult(ResultCode.RESULT_SUCCESS.getCode());
- 			userRespDto.setTempPwYn(userVO.getTempPwYn());
- 			userRespDto.setUserSeq(userVO.getUserSeq());
- 			*/
-
- 	    	
- 		} else {
- 			/* userEntity로 수정하기
- 			userRespDto.setResult(ResultCode.RESULT_FAIL.getCode());
- 			*/
- 		}
- 		
+ 		UserRespDto resp = userService.userLogin(userReqDto, session, userVO);
  		return resp;
     }
    
