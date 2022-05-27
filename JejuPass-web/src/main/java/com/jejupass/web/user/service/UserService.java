@@ -27,7 +27,6 @@ public class UserService {
 		return userMapper.login(userReqDto);
 	}
 	
-	
 	public UserRespDto userLogin(UserReqDto userReqDto, HttpSession session, UserVO userVO) {
  		UserRespDto resp = new UserRespDto();
  		
@@ -50,12 +49,9 @@ public class UserService {
  			// 마지막 로그인 시간 저장
  			userMapper.updateLastLoginDate(userVO);
  			
- 			
  			resp.setResult(ResultCode.RESULT_SUCCESS.getCode());
  			resp.getRespData().setTempPwYn(userVO.getTempPwYn());
  			resp.getRespData().setUserSeq(userVO.getUserSeq());
- 			
-
  	    	
  		} else {
  			resp.setResult(ResultCode.RESULT_FAIL.getCode());
