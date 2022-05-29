@@ -2,7 +2,7 @@ package com.jejupass.web.user.dto.response;
 
 import org.apache.ibatis.type.Alias;
 
-import com.jejupass.web.user.userEntity.UserEntity;
+import com.jejupass.web.user.entity.UserEntity;
 
 import lombok.Getter;
 import lombok.Setter;

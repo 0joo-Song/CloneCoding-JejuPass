@@ -1,4 +1,4 @@
-package com.jejupass.web.user.userEntity;
+package com.jejupass.web.user.entity;
 
 import org.apache.ibatis.type.Alias;
 
