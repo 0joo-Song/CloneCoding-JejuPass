@@ -6,10 +6,6 @@
                         <div class="quick_btn_box">
                             <ul>
                                 <li><a href="javascript:void(0);"><img src="" alt="항공"></a></li>
-                                <li><a href="javascript:void(0);"><img src="" alt="렌트카"></a></li>
-                                <li><a href="javascript:void(0);"><img src="" alt="숙박"></a></li>
-                                <li><a href="javascript:void(0);"><img src="" alt="맛집"></a></li>
-                                <li><a href="javascript:void(0);"><img src="" alt="카페"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -41,48 +37,24 @@
                                </div>
                                <div><button>검색</button></div>
                             </div>
-                            <div class="rant_car_box">
-                                <div>
-                                    <p>인수/반납일</p>
-                                    <button>인수/반납일을 선택해주세요.</button>
-                                </div>
-                                <div>
-                                    <p>인수/반납시간</p>
-                                    <button>시간을 선택해주세요.</button>
-                                </div>
-                                <div>
-                                    <p>차량조건</p>
-                                    <button>조건을 선택해주세요.</button>
-                                </div>
-                                <div>
-                                    <p>운전자조건</p>
-                                    <button>운전자조건을 선택해주세요.</button>
-                                </div>
-                                <div><button>검색</button></div>
-                            </div>
-                            <div class="stay_box">
-                                <div class="stay_input">
-                                    <input type="text" id="stayinput" placeholder="목적지, 호텔·숙소명,관광명소">
-                                </div>
-                                <div><button>검색</button></div>
-                            </div>
-                            <div class="restau_box">
-                                <div class="restau_input">
-                                    <input type="text" id="restauinput" placeholder="맛집을 검색하세요.">
-                                </div>
-                                <div><button>검색</button></div>
-                            </div>
-                            <div class="cafe_box">
-                                <div class="cafe_input">
-                                    <input type="text" id="cafeinput" placeholder="상호명 혹은 키워드를 입력하세요.">
-                                </div>
-                                <div><button>검색</button></div>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div id="sec03" class="sec03 section">
                     <div class="cont_wrap">
-
+                        <div class="main_box">
+                            <div class="title_box">
+                                <p class="title_img"><img src="./assets/image/logo_MJB.png" alt=""></p>
+                                <p class="title">청정 제주를 지키는 여행,<br>
+                                    제주패스와 함께해 주세요
+                                </p>
+                                <a class="btn" href="#">참여하기</a>
+                            </div>
+                            <div class="main_video">
+                                <video src="./assets/image/main_home_video.mp4" autoplay muted loop>
+                                    <source src="./assets/image/main_home_video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
