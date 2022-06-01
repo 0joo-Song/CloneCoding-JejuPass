@@ -1,18 +1,19 @@
 .logo{width: 140px;height: auto;}
-#wrapper{}
-#wrapper #header{display:flex;justify-content: space-between;align-items: center;}
-#wrapper #header .logo{}
-#wrapper #header .nav{}
-#wrapper #header .nav ul{}
-#wrapper #header .nav ul li{display: inline-block;}
-#wrapper #header .nav ul .search{}
-#wrapper #header .user_btn_box{}
-#wrapper #header .user_btn_box .user_btn p{display: inline-block;text-align: center;}
 
+#header{display:flex;justify-content: space-between;align-items: center;}
+#header .logo{}
+#header .nav{}
+#header .nav ul{}
+#header .nav ul li{display: inline-block;}
+#header .nav ul .search{}
+#header .user_btn_box{}
+#header .user_btn_box .user_btn p{display: inline-block;text-align: center;}
+
+#wrapper{}
 #wrapper #wrap{}
 #wrapper #wrap .container{}
 #wrapper #wrap .container .section{}
-#wrapper #wrap .container .section .cont_wrap{}
+#wrapper #wrap .container .section .cont_wrap {min-width: 1420px;max-width: 1420px;margin: 0 auto;}
 
 #sec01{}
 #sec01 .cont_wrap{}
@@ -22,3 +23,23 @@
 #sec01 .cont_wrap .quick_btn_box ul li:first-child{margin-left: 0;}
 #sec01 .cont_wrap .quick_btn_box ul li:last-child{margin-right: 0;}
 #sec01 .cont_wrap .quick_btn_box ul li a{display: block;width: 100%;height:100%;}
+
+#sec02 .cont_wrap{}
+#sec02 .cont_wrap .tab_box{}
+#sec02 .cont_wrap .tab_box .airport_box{display: flex;justify-content: space-between;align-items: center;}
+#sec02 .cont_wrap .tab_box .airport_box ul{border: 1px solid #63a1ff;border-radius: 10px;}
+#sec02 .cont_wrap .tab_box .airport_box ul li{}
+#sec02 .cont_wrap .tab_box .airport_box .start_end_box{display: flex;justify-content: space-between;align-items: center; width: 478px;}
+#sec02 .cont_wrap .tab_box .airport_box .start_end_box li{}
+#sec02 .cont_wrap .tab_box .airport_box .go_day{width: 276px;}
+#sec02 .cont_wrap .tab_box .airport_box .go_day li{}
+#sec02 .cont_wrap .tab_box .airport_box .user_num{width: 232px;}
+#sec02 .cont_wrap .tab_box .airport_box .user_num li{}
+
+#sec03{}
+#sec03 .cont_wrap{}
+#sec03 .cont_wrap .main_box{}
+#sec03 .cont_wrap .main_box .title_box{}
+#sec03 .cont_wrap .main_box .title_box .title_img{width: 318px;height: 40px;}
+
+
