@@ -5,7 +5,7 @@ import com.jejupass.web.user.vo.UserVO;
 
 public interface UserMapper {
 
-	UserVO login(UserReqDto userReqDto);
+	UserVO selectUserLogin(UserReqDto userReqDto);
 
 	int selectDupUserId(UserReqDto userReqDto);
 

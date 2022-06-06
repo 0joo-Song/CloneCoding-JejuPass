@@ -27,12 +27,12 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
 		HttpSession session = request.getSession();
 		session.setMaxInactiveInterval(60 * 60 * 24);
 		Object obj = (UserVO) session.getAttribute("userLogin");
-		/*
+		
 		if (obj == null) {
 			response.sendRedirect("/index.do");
 			return false;
 		}
-		*/
+		
 		return true;
 	}
 

@@ -52,8 +52,7 @@ public class WebConfig implements WebMvcConfigurer {
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(loginCheckInterceptor).addPathPatterns("/**/*.do")
 		        .excludePathPatterns("/index.do")
-		        .excludePathPatterns("/dataSave.do") // 테스트
-		        .excludePathPatterns("/main/login.do")
+		        .excludePathPatterns("/user/login.do")
 		        .excludePathPatterns("/comm/*.do")
 				.excludePathPatterns("/error");
 	}

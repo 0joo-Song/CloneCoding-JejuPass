@@ -16,5 +16,6 @@ public class UserRespDto {
 	private UserEntity respData;
 	
 	private String result;
+	private String resultMsg;
 	
 }

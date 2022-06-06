@@ -39,12 +39,12 @@ public class UserService {
  			userReqDto.getReqData().setEncPw(EncryptUtil.encryptPW(userReqDto.getReqData().getUserPw()));
  		}
  		
- 		userVO = userMapper.login(userReqDto);
+ 		userVO = userMapper.selectUserLogin(userReqDto);
  	
  		if(userVO != null) {
  			session.setAttribute("userLogin", userVO);		
  			// 마지막 로그인 시간 저장
- 			userMapper.updateLastLoginDate(userVO);
+ 			//userMapper.updateLastLoginDate(userVO);
  			
  			resp.setResult(ResultCode.RESULT_SUCCESS.getCode());
  			resp.getRespData().setTempPwYn(userVO.getTempPwYn());

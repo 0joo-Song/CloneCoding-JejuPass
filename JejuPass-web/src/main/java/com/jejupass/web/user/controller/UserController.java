@@ -36,6 +36,7 @@ public class UserController {
 	 	public String loginPage(Model model, HttpServletRequest request ) throws Exception {
 	    	// 로그인 이전 페이지로 이동
 		    // /user/login.do?prevPage='원래있던곳 api주소'
+			/*
 	    	String prevPage = request.getParameter("prevPage");
 	    	log.info("prevPage====>" + prevPage);
 	    		
@@ -43,8 +44,9 @@ public class UserController {
 	    		prevPage = "/index.do";
 	    	} 
 	    	model.addAttribute("prevPage", prevPage);
+	    	*/
 	    	
-	 		return "web/user/login";
+	 		return "blank:web/user/login";
 	}
 	
 	/**
