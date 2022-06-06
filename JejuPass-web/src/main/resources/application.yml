@@ -1,11 +1,10 @@
 # base
 spring: 
-  datasource: 
-    jejupass: 
-      driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-      jdbc-url: jdbc:log4jdbc:mariadb://34.64.232.46:3306/jejupass-db?characterEncoding=utf-8&serverTimezone=UTC 
-      username: root
+  datasource:
+      url: jdbc:oracle:thin:@127.0.0.1:1521:XE
+      username: OJOO
       password: dudwndkfma1@
+      driver-class-name: oracle.jdbc.driver.OracleDriver
       
   servlet: 
     multipart: 

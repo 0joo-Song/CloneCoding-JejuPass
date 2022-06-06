@@ -4,6 +4,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -12,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jejupass.common.utils.EncryptUtil;
 import com.jejupass.web.user.dto.request.UserReqDto;
 import com.jejupass.web.user.dto.response.UserRespDto;
 import com.jejupass.web.user.service.UserService;
@@ -33,7 +33,7 @@ public class UserController {
 	 * @throws Exception
 	 */
 	@RequestMapping(value="/user/login.do", method = {RequestMethod.GET, RequestMethod.POST})
-	 	public String loginPage(Model model, HttpServletRequest request) throws Exception {
+	 	public String loginPage(Model model, HttpServletRequest request ) throws Exception {
 	    	// 로그인 이전 페이지로 이동
 		    // /user/login.do?prevPage='원래있던곳 api주소'
 	    	String prevPage = request.getParameter("prevPage");

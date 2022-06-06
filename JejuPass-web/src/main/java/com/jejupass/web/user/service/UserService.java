@@ -18,15 +18,12 @@ public class UserService {
 	@Autowired
 	private UserMapper userMapper;
 	
+
 	/**
 	 * 회원 로그인
 	 * @param userReqDto
 	 * @return
 	 */
-	public UserVO login(UserReqDto userReqDto) {
-		return userMapper.login(userReqDto);
-	}
-	
 	public UserRespDto userLogin(UserReqDto userReqDto, HttpSession session, UserVO userVO) {
  		UserRespDto resp = new UserRespDto();
  		
@@ -76,6 +73,8 @@ public class UserService {
 	public int selectDupUserId(UserReqDto userReqDto) {
 		return userMapper.selectDupUserId(userReqDto);
 	}
+
+
 
 
 	
