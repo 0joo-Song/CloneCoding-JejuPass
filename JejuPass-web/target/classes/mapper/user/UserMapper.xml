@@ -2,5 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jejupass.web.user.mapper.UserMapper">
 	
+	<select id="selectUserLogin" parameterType="userReqDto" resultType="UserVO">
+		/* MainMapper.selectUserLogin */
+		SELECT USER_SEQ
+			   ,USER_ID
+			   ,USER_NM
+			   ,REG_DT
+			   ,TEL
+		  FROM TB_USER
+		 WHERE USER_ID = #{reqData.userId}
+		   AND USER_PW = #{reqData.encPw}
+	</select>
 
 </mapper>

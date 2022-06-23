@@ -1,17 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" isELIgnored="false"%>
 <%@ include file="/WEB-INF/views/include/incDeclare.jsp" %>
-
-<!-- 임시데이터 -->
-<form id="frm" name="frm" method="POST">
-<div style="border:solid 1px black;width:60%;height:100px">
-<input type="text" id="userId" name="reqData.userId" class="item-input" placeholder="아이디(이메일)" style="border:solid 1px black;"><br>
-<p id="userIdEmailCheckMsg"></p><br>
-<input type="password" onkeyup="enterkey();" id="userPw" name="reqData.userPw" class="item-input" placeholder="비밀번호" style="border:solid 1px black;"
-autoComplete="off"><br>
-<p id="userPwFailMsg"></p><br>
-<button onclick="login()" style="background-color:#eeeeee">로그인</button>
-</div>
-</form>
+	
+	<form id="frm" name="frm" method="POST">
+    <div id="sec01" class="sec01 section">
+                    <div class="cont_wrap">
+                        <div class="login_cont">
+                            <div class="id_box">
+                                <label for="user_id">아이디(이메일)</label>
+                                <input type="text" name="reqData.userId" id="userId" placeholder="E-mail을 입력해주세요.">
+                            </div>
+                            <div class="psw_box">
+                                <label for="user_pw">비밀번호</label>
+                                <input type="password" onkeyup="enterkey();" name="reqData.userPw" id="userPw" placeholder="비밀번호를 입력해주세요.">
+                            </div>
+                            <div class="check_box">
+                                <input type="checkbox" name="lg_ck" id="lg_ck">
+                                <label for="lg_ck">로그인 유지</label>
+                                <input type="checkbox" name="user_id_ck" id="user_id_ck">
+                                <label for="id_ck">아이디 저장</label>
+                            </div>
+                            <div class="button_box">
+                                <button class="login_btn" onclick="login()">로그인</button>
+                                <a href="#">아이디 찾기</a>
+                                <a href="#">비밀번호 찾기</a>
+                                <a href="#">회원가입</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
 
 <script type="text/javascript">
 
