@@ -1,34 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" isELIgnored="false"%>
 <%@ include file="/WEB-INF/views/include/incDeclare.jsp" %>
-	
-	<form id="frm" name="frm" method="POST">
-    <div id="sec01" class="sec01 section">
-                    <div class="cont_wrap">
-                        <div class="login_cont">
-                            <div class="id_box">
-                                <label for="user_id">아이디(이메일)</label>
-                                <input type="text" name="reqData.userId" id="userId" placeholder="E-mail을 입력해주세요.">
-                            </div>
-                            <div class="psw_box">
-                                <label for="user_pw">비밀번호</label>
-                                <input type="password" onkeyup="enterkey();" name="reqData.userPw" id="userPw" placeholder="비밀번호를 입력해주세요.">
-                            </div>
-                            <div class="check_box">
-                                <input type="checkbox" name="lg_ck" id="lg_ck">
-                                <label for="lg_ck">로그인 유지</label>
-                                <input type="checkbox" name="user_id_ck" id="user_id_ck">
-                                <label for="id_ck">아이디 저장</label>
-                            </div>
-                            <div class="button_box">
-                                <button class="login_btn" onclick="login()">로그인</button>
-                                <a href="#">아이디 찾기</a>
-                                <a href="#">비밀번호 찾기</a>
-                                <a href="#">회원가입</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </form>
+
+<form id="frm" name="frm" method="POST">
+	<div id="sec01" class="sec01 section">
+		<div class="cont_wrap">
+			<div class="login_cont">
+				<div class="id_box">
+					<label for="user_id">아이디(이메일)</label>
+					<input type="text" id="userId" name="reqData.userId" placeholder="E-mail을 입력해주세요.">
+					<p id="userIdEmailCheckMsg" style="display:none;">이메일 형식이 맞지 않습니다.</p>
+				</div>
+				<div class="psw_box">
+					<label for="user_pw">비밀번호</label>
+					<input type="password" onkeyup="enterkey();" id="userPw" 
+					autoComplete="off" placeholder="비밀번호를 입력해주세요.">
+					<p id="userPwCntCheckMsg" style="display:none;">최소 8자 이상 입력해주세요.</p>
+				</div>
+				<div class="check_box">
+					<input type="checkbox" name="lg_ck" id="lg_ck"> <label
+						for="lg_ck">로그인 유지</label> <input type="checkbox" id="user_id_ck">
+					<label for="user_id_ck">아이디 저장</label>
+				</div>
+				<div class="button_box">
+					<button type="button" class="login_btn" onclick="login()">로그인</button>
+					<a class="find_btn find_btn_1" href="#">아이디 찾기</a> 
+					<a class="find_btn find_btn_2" href="#">비밀번호 찾기</a>
+					<a class="find_btn find_btn_3" href="#">회원가입</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
 
 <script type="text/javascript">
 
@@ -40,41 +42,40 @@
 	}
 	
 	// 이메일이 잘못되었는지 확인하는 함수 
-
-	function CheckEmail(str)
-	{                                                 
-	     var reg_email = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+	function CheckEmail(str){                                                 
+	     const reg_email = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
 	     if(!reg_email.test(str)) {       
-	    	  $("#userIdEmailCheckMsg").text("이메일 형식이 맞지 않습니다.");
-	          return false;         
+	    	  document.getElementById('userIdEmailCheckMsg').style.display = 'block';
+	    	  valueChk = false;
 	     }                            
 	     else {              
-	    	  $("#userIdFailMsg").text("");
-	          return true;         
+	    	 document.getElementById('userIdEmailCheckMsg').style.display = 'none';
 	     }                            
 	}         
 	
 	// input 필수 값 유무에 따른 경고 메시지 유무
 	function checkInput(inputId) {
-		var nm = $('#'+inputId);
-		var nmDiv = $('#'+inputId+"FailMsg");
-		if (nm.val()=="") {
-  			nmDiv.show();
+		let nm = document.getElementById(inputId);
+		if(nm.value == ""){
 			valueChk = false;
-		} else {
-			nmDiv.hide();
+			// 공백 팝업 -> 임시로 alert
+			alert("공백을 확인해주세요.");
+			return;
+		}else{
+			
 		}
 	}
 	
-	var valueChk;
-	function login() {
+	// 로그인
+	let valueChk;
+	function login(){
 		valueChk = true;
 		checkInput("userId");
 		checkInput("userPw");
 
+		const email = document.getElementById('userId').value;
+		CheckEmail(email);
 		if(valueChk) {
-			var email = $("#userId").val();
-			CheckEmail(email);
 			
 			$.ajax({
 	            url: '/user/userLogin.do',
@@ -83,18 +84,13 @@
 	            method: 'POST',
 	            success: function (data) {
 	                if(data.result == "success"){
-	                	var prevPage = '${prevPage}';
 	                	if(data.tempPwYn == "Y") {
-	                		alert("임시 비밀번호로 로그인했습니다. \n비밀번호를 변경해주세요.")
-			                location.href="/user/modPw.do?prevPage="+prevPage;
+	                		// 비밀번호 변경 페이지로 이동
 		                } else {
-		                	location.href = prevPage;	
+		                	location.href="/";
 				        }
-		                var prevPage = '${prevPage}';
-		               
-		                		                
 	                } else {
-	                	$("#loginFailMsg").show();
+	                	// 로그인 실패 팝업
 	                }
 	            },
 	            error: function (e) {
