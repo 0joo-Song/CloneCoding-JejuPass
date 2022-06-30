@@ -1,10 +1,10 @@
 # base
 spring: 
   datasource:
-      url: jdbc:oracle:thin:@127.0.0.1:1521:XE
-      username: OJOO
-      password: dudwndkfma1@
-      driver-class-name: oracle.jdbc.driver.OracleDriver
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/jejupass?serverTimezone=Asia/Seoul
+      username: root
+      password: dudwn12#$
       
   servlet: 
     multipart: 

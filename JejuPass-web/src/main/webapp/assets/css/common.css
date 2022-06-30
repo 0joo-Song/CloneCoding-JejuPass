@@ -1,0 +1,31 @@
+.logo{width: 140px;height: auto;}
+
+#header{display:flex;justify-content: space-between;align-items: center;padding: 0 50px;}
+#header .logo{}
+#header .nav{}
+#header .nav ul{}
+#header .nav ul li{display: inline-block;}
+#header .nav ul .search{}
+#header .user_btn_box{}
+#header .user_btn_box .user_btn p{display: inline-block;text-align: center;}
+
+
+#footerTop{display: flex;justify-content: space-evenly;align-items: flex-start;border: 1px solid #c5c5c5; padding: 45px 0 60px;}
+#footerTop .info_ul{display: flex;justify-content: center;align-items: flex-start;}
+#footerTop .info_ul ul{}
+#footerTop .info_ul ul li{color: #c5c5c5;}
+#footerTop .info_ul ul .depth_text{font-weight: 500;color: #222222;}
+#footerTop .down_box{}
+#footerTop .down_box .down_info_box{display: flex;justify-content: space-between;align-items: flex-start;}
+#footerTop .down_box .down_info_box .info_text{}
+#footerTop .down_box .down_info_box .info_text h2{}
+#footerTop .down_box .down_info_box .info_text h2 p{}
+#footerTop .down_box .down_info_box .QR_box{width:90px;height: 90px;}
+#footerTop .down_box .down_btn{display: flex;justify-content: space-around;align-items: center;}
+#footerTop .down_box .down_btn button{width: 147px;height: 40px;border: 1px solid #c5c5c5;border-radius: 5px;}
+
+#footer{padding:60px 72px 0 72px;color: #FFFFFF;  background: #18225c;}
+#footer p a{color: #FFFFFF;}
+#footer .title{}
+#footer .title p{}
+#footer .title span{}
