@@ -1,8 +1,8 @@
 # base
 spring: 
   datasource:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/jejupass?serverTimezone=Asia/Seoul
+      driverClassName: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://localhost:3306/jejupass?serverTimezone=UTC
       username: root
       password: dudwn12#$
       

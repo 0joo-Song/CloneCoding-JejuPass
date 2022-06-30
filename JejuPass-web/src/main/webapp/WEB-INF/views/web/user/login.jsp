@@ -12,7 +12,7 @@
 				</div>
 				<div class="psw_box">
 					<label for="user_pw">비밀번호</label>
-					<input type="password" onkeyup="enterkey();" id="userPw" 
+					<input type="password" onkeyup="enterkey();" id="userPw" name="reqData.userPw" 
 					autoComplete="off" placeholder="비밀번호를 입력해주세요.">
 					<p id="userPwCntCheckMsg" style="display:none;">최소 8자 이상 입력해주세요.</p>
 				</div>
@@ -87,10 +87,10 @@
 	                	if(data.tempPwYn == "Y") {
 	                		// 비밀번호 변경 페이지로 이동
 		                } else {
-		                	location.href="/";
+		                	alert("로그인 성공");
 				        }
 	                } else {
-	                	// 로그인 실패 팝업
+	                	alert("로그인 실패");
 	                }
 	            },
 	            error: function (e) {

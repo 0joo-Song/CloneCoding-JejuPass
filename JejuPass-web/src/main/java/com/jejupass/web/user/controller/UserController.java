@@ -46,7 +46,7 @@ public class UserController {
 	    	model.addAttribute("prevPage", prevPage);
 	    	*/
 	    	
-	 		return "blank:web/user/login";
+	 		return "web/user/login";
 	}
 	
 	/**

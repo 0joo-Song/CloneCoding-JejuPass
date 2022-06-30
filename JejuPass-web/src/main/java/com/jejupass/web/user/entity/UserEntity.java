@@ -23,4 +23,5 @@ public class UserEntity {
 	private String userTel;
 	private String userEmail;
 	private String tempPwYn;
+	private String lastLoginDt;
 }
