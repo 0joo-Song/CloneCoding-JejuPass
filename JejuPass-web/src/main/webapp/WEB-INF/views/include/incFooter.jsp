@@ -27,7 +27,7 @@
                         </p>
                     </div>
                     <div class="QR_box">
-                        <p><img src="./assets/image/bg_appDown.png" alt=""></p>
+                        <p><img src="../../../assets/image/bg_appDown.png" alt=""></p>
                     </div>
                 </div>
                 <div>

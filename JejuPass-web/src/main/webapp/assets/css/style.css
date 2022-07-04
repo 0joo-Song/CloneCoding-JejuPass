@@ -38,16 +38,20 @@ text-align: center;color: #FFFFFF;z-index: 999;}
 .main #sec03 .cont_wrap .main_box .title_box .btn{display: block;color: #FFFFFF;}
 .main #sec03 .cont_wrap .main_box .main_video{width: 100%;height: 100%;z-index: -1;}
 
+#wrap .section .cont_wrap{}
+#wrap .section .cont_wrap .title_box{margin-top: 100px;text-align: center;}
+
+.button_box {text-align: center;}
+.button_box .go_btn{display:block; width: 560px;height: 56px;margin:0 auto;font-size: 1.5rem;font-weight: 600; color: #FFFFFF;text-align: center;line-height: 56px;background: #2f7bf2;border-radius: 10px;}
+
 .login .sec01{}
-.login .sec01 .login_cont{width: 560px;margin: 0 auto;padding-top: 100px;}
+.login .sec01 .login_cont{width: 560px;margin: 0 auto;padding-top: 50px;}
 .login .sec01 .login_cont .id_box{margin:0 0 25px;}
 .login .sec01 .login_cont .check_box{display: flex;align-items: center; margin: 25px 0;}
-.login .sec01 .login_cont .button_box{text-align: center;}
 .login .sec01 input[type="text"]{display: block;width: 100%;height:50px;padding-left: 15px; border: 1px solid #c5c5c5;border-radius: 5px;}
 .login .sec01 label{font-size: 0.8rem;}
 .login .sec01 input[type="checkbox"]{width: 20px;height: 20px; border: 1px solid #c5c5c5;margin-right: 5px;}
-.login .sec01 input[type="checkbox"]:checked{width: 20px;height: 20px; border: 1px solid #c5c5c5;background: #63a1ff;}
-.login .login_btn{display:block; width: 560px;height: 56px;margin-bottom: 25px; font-size: 1.5rem;font-weight: 600; color: #FFFFFF;text-align: center;line-height: 56px;background: #2f7bf2;border-radius: 10px;}
+.login .sec01 input[type="checkbox"]:checked{width: 20px;height: 20px; border: 1px solid #c5c5c5;background: #63a1ff;}.login .login_btn{margin-bottom: 25px; }
 .login .find_btn{text-decoration: solid;}
 .login .find_btn_1{}
 .login .find_btn_2{margin: 0 10px;}
@@ -55,5 +59,8 @@ text-align: center;color: #FFFFFF;z-index: 999;}
 .login .find_btn_2::after{display: inline-block;content: '';width: 1px;height:15px;margin:0 10px;background: #c5c5c5;}
 .login .find_btn_3{}
 
+.pass .title_box{}
+.pass .title_box h4{margin-top: 25px;}
+.pass .pass_btn{margin-top: 100px;}
 
 

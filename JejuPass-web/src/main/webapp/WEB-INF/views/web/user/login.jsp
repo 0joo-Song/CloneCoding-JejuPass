@@ -2,34 +2,35 @@
 <%@ include file="/WEB-INF/views/include/incDeclare.jsp" %>
 
 <form id="frm" name="frm" method="POST">
-	<div id="sec01" class="sec01 section">
-		<div class="cont_wrap">
-			<div class="login_cont">
-				<div class="id_box">
-					<label for="user_id">아이디(이메일)</label>
-					<input type="text" id="userId" name="reqData.userId" placeholder="E-mail을 입력해주세요.">
-					<p id="userIdEmailCheckMsg" style="display:none;">이메일 형식이 맞지 않습니다.</p>
-				</div>
-				<div class="psw_box">
-					<label for="user_pw">비밀번호</label>
-					<input type="password" onkeyup="enterkey();" id="userPw" name="reqData.userPw" 
-					autoComplete="off" placeholder="비밀번호를 입력해주세요.">
-					<p id="userPwCntCheckMsg" style="display:none;">최소 8자 이상 입력해주세요.</p>
-				</div>
-				<div class="check_box">
-					<input type="checkbox" name="lg_ck" id="lg_ck"> <label
-						for="lg_ck">로그인 유지</label> <input type="checkbox" id="user_id_ck">
-					<label for="user_id_ck">아이디 저장</label>
-				</div>
-				<div class="button_box">
-					<button type="button" class="login_btn" onclick="login()">로그인</button>
-					<a class="find_btn find_btn_1" href="#">아이디 찾기</a> 
-					<a class="find_btn find_btn_2" href="#">비밀번호 찾기</a>
-					<a class="find_btn find_btn_3" href="#">회원가입</a>
-				</div>
-			</div>
-		</div>
-	</div>
+	 <div id="sec01" class="sec01 section">
+                    <div class="cont_wrap">
+                        <div class="login_cont">
+                            <div class="id_box">
+                                <label for="user_id">아이디(이메일)</label>
+                                <input type="text" id="userId" name="reqData.userId" placeholder="E-mail을 입력해주세요.">
+                                <p id="userIdEmailCheckMsg" style="display:none;">이메일 형식이 맞지 않습니다.</p>
+                            </div>
+                            <div class="psw_box">
+                                <label for="user_pw">비밀번호</label>
+                                <input type="password" onkeyup="enterkey();" id="userPw" name="reqData.userPw" 
+								autoComplete="off" placeholder="비밀번호를 입력해주세요.">
+								<p id="userPwCntCheckMsg" style="display:none;">최소 8자 이상 입력해주세요.</p>
+                            </div>
+                            <div class="check_box">
+                                <input type="checkbox" name="lg_ck" id="lg_ck">
+                                <label for="lg_ck">로그인 유지</label>
+                                <input type="checkbox" id="user_id_ck">
+                                <label for="user_id_ck">아이디 저장</label>
+                            </div>
+                            <div class="button_box">
+                                <button class="login_btn" onclick="login()" >로그인</button>
+                                <a class="find_btn find_btn_1" href="#">아이디 찾기</a>
+                                <a class="find_btn find_btn_2" href="#">비밀번호 찾기</a>
+                                <a class="find_btn find_btn_3" href="#">회원가입</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 </form>
 
 <script type="text/javascript">
