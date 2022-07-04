@@ -1,20 +1,15 @@
 # base
-spring: 
-  datasource:
-      driverClassName: com.mysql.cj.jdbc.Driver
-      jdbcUrl: jdbc:mysql://localhost:3306/jejupass?serverTimezone=UTC
+spring:
+  datasource: 
+    jejupass: 
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/jejupass-db?characterEncoding=utf-8&serverTimezone=UTC
       username: root
       password: dudwn12#$
-      
-  servlet: 
-    multipart: 
-      enabled: true 
-      maxFileSize: 1000MB
-      maxRequestSize: 1000MB
-
-# introPage
+    
+#introPage
   webservice:
-    intro: index.do
+    intro: /index.do
 
 # file
 file:

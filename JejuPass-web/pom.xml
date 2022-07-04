@@ -70,17 +70,12 @@
 		    <artifactId>mybatis-spring-boot-starter</artifactId>
 		    <version>2.2.0</version>
 		</dependency>
-		<!-- mariaDB -->
+		<!-- mysql -->
 		<dependency>
-		    <groupId>org.mariadb.jdbc</groupId>
-		    <artifactId>mariadb-java-client</artifactId>
-		</dependency>	
-		<!-- oracle DB -->
-		<dependency>
-		    <groupId>com.oracle.database.jdbc</groupId>
-		    <artifactId>ojdbc8</artifactId>
-		    <scope>runtime</scope>
-		</dependency>			
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.29</version>
+		</dependency>
 		<!-- log4jdbc -->
 		<dependency>
 		    <groupId>org.bgee.log4jdbc-log4j2</groupId>

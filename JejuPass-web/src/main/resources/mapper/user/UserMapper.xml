@@ -8,7 +8,8 @@
 			   ,USER_ID
 			   ,USER_NM
 			   ,REG_DT
-			   ,TEL
+			   ,USER_TEL
+			   ,TEMP_PW_YN
 		  FROM TB_USER
 		 WHERE USER_ID = #{reqData.userId}
 		   AND USER_PW = #{reqData.encPw}

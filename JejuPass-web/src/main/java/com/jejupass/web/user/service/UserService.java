@@ -38,7 +38,7 @@ public class UserService {
  		} else {
  			userReqDto.getReqData().setEncPw(EncryptUtil.encryptPW(userReqDto.getReqData().getUserPw()));
  		}
- 		
+ 		System.out.println("서비스까지는 왔음");
  		userVO = userMapper.selectUserLogin(userReqDto);
  	
  		if(userVO != null) {
@@ -47,8 +47,10 @@ public class UserService {
  			//userMapper.updateLastLoginDate(userVO);
  			
  			resp.setResult(ResultCode.RESULT_SUCCESS.getCode());
- 			resp.getRespData().setTempPwYn(userVO.getTempPwYn());
- 			resp.getRespData().setUserSeq(userVO.getUserSeq());
+ 			System.out.println("@@@@@@@@@@@@@@@@@@"+userVO.getTempPwYn());
+ 			System.out.println("@@@@@@@@@@@@@@@@@@"+userVO.getUserSeq());
+ 			//resp.getRespData().setTempPwYn(userVO.getTempPwYn());
+ 			//resp.getRespData().setUserSeq(userVO.getUserSeq());
  	    	
  		} else {
  			resp.setResult(ResultCode.RESULT_FAIL.getCode());
