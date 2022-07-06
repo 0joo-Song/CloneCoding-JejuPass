@@ -25,6 +25,7 @@ public class UserController {
     
 	@Resource(name="userService")
 	private UserService userService;	
+	
 	/**
 	 * 로그인 페이지
 	 * @param model
@@ -76,6 +77,39 @@ public class UserController {
         return "redirect:/index.do"; 
     }
     
+    /**
+     * 회원가입 - step 1 : 휴대폰 인증
+     * @param model
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value="/user/join_telConfirm.do", method = {RequestMethod.GET, RequestMethod.POST})
+ 	public String join_telConfirm(Model model) throws Exception {
+ 		return "web/user/join_telConfirm";
+    }	
+    
+    
+    /**
+     * 회원가입 - step 2 : 개인정보 동의 
+     * @param model
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value="/user/join_agree.do", method = {RequestMethod.GET, RequestMethod.POST})
+ 	public String join_agree(Model model) throws Exception {
+ 		return "web/user/join_agree";
+    }	
+    
+    /**
+     * 회원가입 - step 3 : 회원정보 입력
+     * @param model
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value="/user/join.do", method = {RequestMethod.GET, RequestMethod.POST})
+ 	public String join(Model model) throws Exception {
+ 		return "web/user/join";
+    }	
     
     /**
      * 회원가입

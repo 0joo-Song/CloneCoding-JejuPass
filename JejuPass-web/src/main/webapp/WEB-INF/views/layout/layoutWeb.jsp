@@ -6,11 +6,9 @@
     <tiles:insertAttribute name="header" />
   </head>
   <body>
-    <div id="wrap">
+     <div id="wrapper">
   	  <tiles:insertAttribute name="gnb" />
-      <div id="container">
   	    <tiles:insertAttribute name="contents" />
-      </div>
       <tiles:insertAttribute name="footer" />
     </div>
   </body>

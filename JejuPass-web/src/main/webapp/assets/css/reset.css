@@ -8,7 +8,7 @@ html{overflow-x: hidden;-webkit-touch-callout:none;-webkit-user-select:none;}/* 
 body{min-width: 320px;max-width: 100%;font-family: 'Noto Sans KR', sans-serif;color: #242424;}
 ol,ul,li{list-style: none;}
 table,th,td{border-collapse: collapse;/*border-spacing: 0;*/}
-input{-webkit-appearance: none;-webkit-border-radius: 0;border-radius: 0;}
+/* input{-webkit-appearance: none;-webkit-border-radius: 0;border-radius: 0;} */
 input[type=text]::-ms-clear, 
 input[type=tel]::-ms-clear{display: none;}
 select{-webkit-appearance: none;-moz-appearance: none;appearance: none;}

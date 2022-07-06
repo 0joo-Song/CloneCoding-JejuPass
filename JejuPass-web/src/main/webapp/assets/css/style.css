@@ -2,7 +2,7 @@
 
 #wrapper{}
 #wrapper #wrap{}
-#wrapper #wrap .container{padding: 0 0 160px;}
+#wrapper #wrap .container{width: 560px;margin: 0 auto; padding: 0 0 160px;}
 #wrapper #wrap .container .section{}
 #wrapper #wrap .container .section .cont_wrap {margin: 0 auto;}
 
@@ -41,7 +41,7 @@ text-align: center;color: #FFFFFF;z-index: 999;}
 #wrap .section .cont_wrap{}
 #wrap .section .cont_wrap .title_box{margin-top: 100px;text-align: center;}
 
-.button_box {text-align: center;}
+.button_box {text-align: center;margin-top: 30px;}
 .button_box .go_btn{display:block; width: 560px;height: 56px;margin:0 auto;font-size: 1.5rem;font-weight: 600; color: #FFFFFF;text-align: center;line-height: 56px;background: #2f7bf2;border-radius: 10px;}
 
 .login .sec01{}
@@ -63,4 +63,10 @@ text-align: center;color: #FFFFFF;z-index: 999;}
 .pass .title_box h4{margin-top: 25px;}
 .pass .pass_btn{margin-top: 100px;}
 
+.agree_box{width:560px;margin:30px auto 0;padding: 20px 24px; border-radius: 12px; background: #F8F8F8;}
+.agree_box .all_agree{}
+.agree_box .check_box{margin: 20px 0;}
+.agree_box .check_box .ch_div{margin: 10px 0;}
+.agree_box .info_text{}
 
+input{border: 1px solid #c5c5c5;border-radius: 10px;height: 30px;}
