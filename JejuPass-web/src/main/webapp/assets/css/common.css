@@ -1,6 +1,6 @@
 .logo{width: 140px;height: auto;}
 
-#header{display:flex;justify-content: space-between;align-items: center;padding: 0 50px;}
+#header{position: fixed; display:flex;justify-content: space-between;align-items: center;width: 100%; padding: 0 50px;}
 #header .logo{}
 #header .nav{}
 #header .nav ul{}

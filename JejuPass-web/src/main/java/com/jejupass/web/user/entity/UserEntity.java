@@ -24,4 +24,8 @@ public class UserEntity {
 	private String userEmail;
 	private String tempPwYn;
 	private String lastLoginDt;
+	
+	private String useAgree;
+	private String infoAgree;
+	private String mktAgree;
 }

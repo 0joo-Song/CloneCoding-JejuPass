@@ -1,72 +1,91 @@
 
 
+/*공통 스타일*/
 #wrapper{}
 #wrapper #wrap{}
-#wrapper #wrap .container{width: 560px;margin: 0 auto; padding: 0 0 160px;}
+#wrapper #wrap .container{}
 #wrapper #wrap .container .section{}
-#wrapper #wrap .container .section .cont_wrap {margin: 0 auto;}
+#wrapper #wrap .container .section .cont_wrap {max-width: 560px;padding: 0 0 160px;margin: 0 auto;}
+#wrapper #wrap .container .section .cont_wrap .title_box{margin-top: 100px;text-align: center;}
 
-.main #sec01{}
-.main #sec01 .cont_wrap{max-width: 1136px;}
-.main #sec01 .cont_wrap .quick_btn_box{max-width: 500px;margin: 0 auto;}
-.main #sec01 .cont_wrap .quick_btn_box ul{text-align: center;}
-.main #sec01 .cont_wrap .quick_btn_box ul li{display: inline-block;width: 80px;height: 80px;border-radius: 20px;border: 1px solid red;margin: 0 10px;}
-.main #sec01 .cont_wrap .quick_btn_box ul li:first-child{margin-left: 0;}
-.main #sec01 .cont_wrap .quick_btn_box ul li:last-child{margin-right: 0;}
-.main #sec01 .cont_wrap .quick_btn_box ul li a{display: block;width: 100%;height:100%;}
-
-.main #sec02 .cont_wrap{max-width: 1136px;}
-.main #sec02 .cont_wrap .tab_box{padding: 50px 0 30px;}
-.main #sec02 .cont_wrap .tab_box .airport_box{display: flex;justify-content: space-between;align-items: center;}
-.main #sec02 .cont_wrap .tab_box .airport_box ul{border: 1px solid #63a1ff;border-radius: 10px;height:94px;padding: 25px 23px;}
-.main #sec02 .cont_wrap .tab_box .airport_box ul li{}
-.main #sec02 .cont_wrap .tab_box .airport_box .start_end_box{display: flex;justify-content: space-between;align-items: center; width: 478px;}
-.main #sec02 .cont_wrap .tab_box .airport_box .start_end_box li{}
-.main #sec02 .cont_wrap .tab_box .airport_box .go_day{width: 276px;}
-.main #sec02 .cont_wrap .tab_box .airport_box .go_day li{}
-.main #sec02 .cont_wrap .tab_box .airport_box .user_num{width: 232px;}
-.main #sec02 .cont_wrap .tab_box .airport_box .user_num li{}
-.main #sec02 .cont_wrap .tab_box .airport_box .search_btn{width: 50px;height: 50px;border: 1px solid #63a1ff;border-radius: 20px;}
-.main #sec02 .cont_wrap .tab_box .airport_box .search_btn button{text-align: center;width: 100%;height: 100%;}
-
-.main #sec03{}
-.main #sec03 .cont_wrap{position: relative;max-width: none;}
-.main #sec03 .cont_wrap .main_box{}
-.main #sec03 .cont_wrap .main_box .title_box{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);
-text-align: center;color: #FFFFFF;z-index: 999;}
-.main #sec03 .cont_wrap .main_box .title_box .title_img{width: 318px;height: 40px;}
-.main #sec03 .cont_wrap .main_box .title_box .btn{display: block;color: #FFFFFF;}
-.main #sec03 .cont_wrap .main_box .main_video{width: 100%;height: 100%;z-index: -1;}
-
-#wrap .section .cont_wrap{}
-#wrap .section .cont_wrap .title_box{margin-top: 100px;text-align: center;}
 
 .button_box {text-align: center;margin-top: 30px;}
 .button_box .go_btn{display:block; width: 560px;height: 56px;margin:0 auto;font-size: 1.5rem;font-weight: 600; color: #FFFFFF;text-align: center;line-height: 56px;background: #2f7bf2;border-radius: 10px;}
 
-.login .sec01{}
-.login .sec01 .login_cont{width: 560px;margin: 0 auto;padding-top: 50px;}
-.login .sec01 .login_cont .id_box{margin:0 0 25px;}
-.login .sec01 .login_cont .check_box{display: flex;align-items: center; margin: 25px 0;}
-.login .sec01 input[type="text"]{display: block;width: 100%;height:50px;padding-left: 15px; border: 1px solid #c5c5c5;border-radius: 5px;}
-.login .sec01 label{font-size: 0.8rem;}
-.login .sec01 input[type="checkbox"]{width: 20px;height: 20px; border: 1px solid #c5c5c5;margin-right: 5px;}
-.login .sec01 input[type="checkbox"]:checked{width: 20px;height: 20px; border: 1px solid #c5c5c5;background: #63a1ff;}.login .login_btn{margin-bottom: 25px; }
-.login .find_btn{text-decoration: solid;}
-.login .find_btn_1{}
-.login .find_btn_2{margin: 0 10px;}
-.login .find_btn_2::before{display: inline-block;content: '';width: 1px;height:15px;margin:0 10px;background: #c5c5c5;}
-.login .find_btn_2::after{display: inline-block;content: '';width: 1px;height:15px;margin:0 10px;background: #c5c5c5;}
-.login .find_btn_3{}
 
-.pass .title_box{}
-.pass .title_box h4{margin-top: 25px;}
-.pass .pass_btn{margin-top: 100px;}
+/*메인 페이지*/
+#wrapper #wrap.main #sec01{}
+#wrapper #wrap.main #sec01 .cont_wrap{max-width: 1136px;}
+#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box{max-width: 500px;margin: 0 auto;}
+#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box ul{text-align: center;}
+#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box ul li{display: inline-block;width: 30px;height: 30px;margin: 0 10px;}
+#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box ul li:first-child{margin-left: 0;}
+#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box ul li:last-child{margin-right: 0;}
+#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box ul li a{display: block;width: 100%;height:100%;}
 
-.agree_box{width:560px;margin:30px auto 0;padding: 20px 24px; border-radius: 12px; background: #F8F8F8;}
-.agree_box .all_agree{}
-.agree_box .check_box{margin: 20px 0;}
-.agree_box .check_box .ch_div{margin: 10px 0;}
-.agree_box .info_text{}
+#wrapper #wrap.main #sec02 .cont_wrap{max-width: 1136px;}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box{padding: 50px 0 30px;}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box{display: flex;justify-content: space-between;align-items: center;}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box ul{border: 1px solid #63a1ff;border-radius: 10px;height:94px;padding: 25px 23px;}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box ul li{}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .start_end_box{display: flex;justify-content: space-between;align-items: center; width: 478px;}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .start_end_box li{}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .go_day{width: 276px;}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .go_day li{}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .user_num{width: 232px;}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .user_num li{}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .search_btn{width: 50px;height: 50px;border: 1px solid #63a1ff;border-radius: 20px;}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .search_btn button{text-align: center;width: 100%;height: 100%;}
 
-input{border: 1px solid #c5c5c5;border-radius: 10px;height: 30px;}
+#wrapper #wrap.main #sec03{}
+#wrapper #wrap.main #sec03 .cont_wrap{position: relative;max-width: none;height: 100%;padding: 0;}
+#wrapper #wrap.main #sec03 .cont_wrap .main_box{}
+#wrapper #wrap.main #sec03 .cont_wrap .main_box .title_box{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);
+text-align: center;color: #FFFFFF;z-index: 999;}
+#wrapper #wrap.main #sec03 .cont_wrap .main_box .title_box .title_img{width: 318px;height: 40px;}
+#wrapper #wrap.main #sec03 .cont_wrap .main_box .title_box .btn{display: block;color: #FFFFFF;}
+#wrapper #wrap.main #sec03 .cont_wrap .main_box .main_video{width: 100%;height: 100%;z-index: -1;}
+#wrapper #wrap.main #sec03 .cont_wrap .main_box .main_video video{width: 100%;height: 100%;}
+
+/*로그인 페이지*/
+#wrapper #wrap.login .sec01{}
+#wrapper #wrap.login .sec01 .login_cont{width: 560px;margin: 0 auto;padding-top: 50px;}
+#wrapper #wrap.login .sec01 .login_cont .id_box{margin:0 0 25px;}
+#wrapper #wrap.login .sec01 .login_cont .check_box{display: flex;align-items: center; margin: 25px 0;}
+#wrapper #wrap.login .sec01 input[type="text"]{display: block;width: 100%;height:50px;padding-left: 15px; border: 1px solid #c5c5c5;border-radius: 5px;}
+#wrapper #wrap.login .sec01 input[type="password"]{display: block;width: 100%;height:50px;padding-left: 15px; border: 1px solid #c5c5c5;border-radius: 5px;}
+#wrapper #wrap.login .sec01 label{font-size: 0.8rem;}
+#wrapper #wrap.login .sec01 input[type="checkbox"]{width: 20px;height: 20px; border: 1px solid #c5c5c5;margin-right: 5px;}
+#wrapper #wrap.login .sec01 input[type="checkbox"]:checked{width: 20px;height: 20px; border: 1px solid #c5c5c5;background: #63a1ff;}#wrapper #wrap.login .login_btn{margin-bottom: 25px; }
+#wrapper #wrap.login .find_btn{text-decoration: solid;}
+#wrapper #wrap.login .find_btn_1{}
+#wrapper #wrap.login .find_btn_2{margin: 0 10px;}
+#wrapper #wrap.login .find_btn_2::before{display: inline-block;content: '';width: 1px;height:15px;margin:0 10px;background: #c5c5c5;}
+#wrapper #wrap.login .find_btn_2::after{display: inline-block;content: '';width: 1px;height:15px;margin:0 10px;background: #c5c5c5;}
+#wrapper #wrap.login .find_btn_3{}
+
+/*인증 페이지*/
+#wrapper #wrap.pass .title_box{}
+#wrapper #wrap.pass .title_box h4{margin-top: 25px;}
+#wrapper #wrap.pass .pass_btn{margin-top: 100px;}
+
+/*약관동의 페이지*/
+#wrapper #wrap.agree .agree_box{width:560px;margin:30px auto 0;padding: 20px 24px; border-radius: 12px; background: #F8F8F8;}
+#wrapper #wrap.agree .agree_box .all_agree{}
+#wrapper #wrap.agree .agree_box .check_box{margin: 20px 0;}
+#wrapper #wrap.agree .agree_box .check_box .ch_div{margin: 10px 0;}
+#wrapper #wrap.agree .agree_box .info_text{}
+
+/*회원가입 페이지*/
+#wrapper #wrap.join .id_check_box {}
+#wrapper #wrap.join .id_check_box input[type="text"]{width: calc(100% - 80px);}
+#wrapper #wrap.join .overlap_btn{width: 75px;border: 1px solid #2f7bf2;border-radius: 5px;height: 45px;}
+#wrapper #wrap.join .btd_check_box{}
+#wrapper #wrap.join .btd_check_box input{width: 32.9%;}
+
+input{border: 1px solid #c5c5c5;border-radius: 5px;width:100%;height: 45px;}
+.num_check_box input[type="tel"]{width: 100%;}
+.sex_check_box{width: 100%;}
+.sel_box{display:inline-block; width: 49%;height:50px; border: 1px solid #d5d5d5;text-align: center;line-height: 50px;}
+.sel_box input[type="radio"]{display: none;}
+.red_text{color: #E83667;font-size: 13px;}

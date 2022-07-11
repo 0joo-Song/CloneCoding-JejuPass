@@ -107,9 +107,12 @@ public class UserController {
      * @throws Exception
      */
     @RequestMapping(value="/user/join.do", method = {RequestMethod.GET, RequestMethod.POST})
- 	public String join(Model model) throws Exception {
+ 	public String join(Model model, UserReqDto userReqDto) throws Exception {
+    	model.addAttribute("reqData", userReqDto);
+    	System.out.println(userReqDto.getReqData().getInfoAgree());
  		return "web/user/join";
     }	
+    
     
     /**
      * 회원가입

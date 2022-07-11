@@ -2,7 +2,7 @@
 	<!-- #header -->
 	<div id="header">
 		<div class="logo">
-                <img src="/assets/image/logo.png" alt="">
+                <img src="/assets/image/logo.png" alt="" onclick="location.href='/index.do'">
             </div>
             <div class="nav">
                 <ul>
