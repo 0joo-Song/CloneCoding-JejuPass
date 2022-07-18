@@ -1,6 +1,6 @@
 .logo{width: 140px;height: auto;}
 
-#header{position: fixed; display:flex;justify-content: space-between;align-items: center;width: 100%; padding: 0 50px;}
+#header{position: fixed; display:flex;justify-content: space-between;align-items: center;width: 100%; padding: 0 50px;background: #F8F8F8;}
 #header .logo{}
 #header .nav{}
 #header .nav ul{}
@@ -8,6 +8,10 @@
 #header .nav ul .search{}
 #header .user_btn_box{}
 #header .user_btn_box .user_btn p{display: inline-block;text-align: center;}
+#header .user_btn_box .user_btn p a{}
+#header .user_btn_box .user_btn p a::before{display: inline-block;content: '';width: 12px;height: 12px;}
+#header .user_btn_box .user_btn p a.go_login::before{background:url('../image/enter_icon.png')no-repeat center center;background-size:100% 100%;}
+#header .user_btn_box .user_btn p a.go_order::before{background:url('../image/pas_icon.png')no-repeat center center;background-size:100% 100%;}
 
 
 #footerTop{display: flex;justify-content: space-evenly;align-items: flex-start;border: 1px solid #c5c5c5; padding: 45px 0 60px;}
@@ -24,8 +28,18 @@
 #footerTop .down_box .down_btn{display: flex;justify-content: space-around;align-items: center;}
 #footerTop .down_box .down_btn button{width: 147px;height: 40px;border: 1px solid #c5c5c5;border-radius: 5px;}
 
-#footer{padding:60px 72px 0 72px;color: #FFFFFF;  background: #18225c;}
+#footer{padding:60px 72px;color: #FFFFFF;  background: #18225c;}
 #footer p a{color: #FFFFFF;}
 #footer .title{}
 #footer .title p{}
 #footer .title span{}
+
+/* 공통 */
+#popupLayer{position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 99;}
+#popupLayer .dim{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.7);overflow: hidden;}
+#popupLayer .pop_box{position: absolute;left: 50%;width: 가로사이즈;margin-left: -가로사이즈/2;}
+#popupLayer .pop_box .pop_closed{position: absolute;top: 12.85px;right: 12.85px;width: 17.67px;height: 17.67px;z-index: 1;}
+
+/* 팝업 content */
+#popupLayer #pop01{width: ;height: ;background:url('배경') no-repeat top center;background-size:100% 100%;}
+#popupLayer #pop01 .pop_cont{position:relative;width:100%;}

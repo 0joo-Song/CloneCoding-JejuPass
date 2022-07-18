@@ -20,6 +20,7 @@ public class UserEntity {
 	private String userPw;
 	private String encPw;
 	private String userNm;
+	private String userBirth;
 	private String userTel;
 	private String userEmail;
 	private String tempPwYn;

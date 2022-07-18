@@ -3,7 +3,7 @@
 /*공통 스타일*/
 #wrapper{}
 #wrapper #wrap{}
-#wrapper #wrap .container{}
+#wrapper #wrap .container{padding-bottom: 160px;}
 #wrapper #wrap .container .section{}
 #wrapper #wrap .container .section .cont_wrap {max-width: 560px;padding: 0 0 160px;margin: 0 auto;}
 #wrapper #wrap .container .section .cont_wrap .title_box{margin-top: 100px;text-align: center;}
@@ -11,17 +11,22 @@
 
 .button_box {text-align: center;margin-top: 30px;}
 .button_box .go_btn{display:block; width: 560px;height: 56px;margin:0 auto;font-size: 1.5rem;font-weight: 600; color: #FFFFFF;text-align: center;line-height: 56px;background: #2f7bf2;border-radius: 10px;}
-
+input{border: 1px solid #c5c5c5;border-radius: 5px;width:100%;height: 45px;}
+.num_check_box input[type="tel"]{width: 100%;}
+.sex_check_box{width: 100%;}
+.sel_box{display:inline-block; width: 49%;height:50px; border: 1px solid #d5d5d5;text-align: center;line-height: 50px;}
+.sel_box input[type="radio"]{display: none;}
+.red_text{color: #E83667;font-size: 13px;}
 
 /*메인 페이지*/
-#wrapper #wrap.main #sec01{}
-#wrapper #wrap.main #sec01 .cont_wrap{max-width: 1136px;}
+#wrapper #wrap.main #sec01{background: #F8F8F8;}
+#wrapper #wrap.main #sec01 .cont_wrap{max-width: 1136px;padding-top: 100px;}
 #wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box{max-width: 500px;margin: 0 auto;}
-#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box ul{text-align: center;}
-#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box ul li{display: inline-block;width: 30px;height: 30px;margin: 0 10px;}
-#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box ul li:first-child{margin-left: 0;}
-#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box ul li:last-child{margin-right: 0;}
-#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box ul li a{display: block;width: 100%;height:100%;}
+#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box .air_icon{width:80px;height:80px;margin: 0 auto; border-radius: 20px;background: #63a1ff;}
+#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box .air_icon .air_btn{display: block;width: 100%;height:100%;padding: 25px 0;}
+#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box .air_icon .air_btn .air_img{display: block;width: 30px;height:30px;margin:0 auto; background: url('../image/air_icon_w.png') no-repeat center center;background-size: 100% 100%;background-color: #63a1ff;}
+#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box .air_icon:hover .air_btn{background: #ffffff; border-radius: 19px;}
+#wrapper #wrap.main #sec01 .cont_wrap .quick_btn_box .air_icon:hover .air_btn .air_img{display: block;width: 30px;height:30px;background: url('../image/air_icon_s.png') no-repeat center center;background-size: 100% 100%;background-color: #FFFFFF;}
 
 #wrapper #wrap.main #sec02 .cont_wrap{max-width: 1136px;}
 #wrapper #wrap.main #sec02 .cont_wrap .tab_box{padding: 50px 0 30px;}
@@ -34,8 +39,8 @@
 #wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .go_day li{}
 #wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .user_num{width: 232px;}
 #wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .user_num li{}
-#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .search_btn{width: 50px;height: 50px;border: 1px solid #63a1ff;border-radius: 20px;}
-#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .search_btn button{text-align: center;width: 100%;height: 100%;}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .search_btn{width: 94px;height: 94px;border: 1px solid #63a1ff;border-radius: 20px;background: #63a1ff;}
+#wrapper #wrap.main #sec02 .cont_wrap .tab_box .airport_box .search_btn button{text-align: center;width: 100%;height: 100%;font-size: 18px;font-weight: 600;color: #FFFFFF;}
 
 #wrapper #wrap.main #sec03{}
 #wrapper #wrap.main #sec03 .cont_wrap{position: relative;max-width: none;height: 100%;padding: 0;}
@@ -47,11 +52,14 @@ text-align: center;color: #FFFFFF;z-index: 999;}
 #wrapper #wrap.main #sec03 .cont_wrap .main_box .main_video{width: 100%;height: 100%;z-index: -1;}
 #wrapper #wrap.main #sec03 .cont_wrap .main_box .main_video video{width: 100%;height: 100%;}
 
+
 /*로그인 페이지*/
 #wrapper #wrap.login .sec01{}
 #wrapper #wrap.login .sec01 .login_cont{width: 560px;margin: 0 auto;padding-top: 50px;}
 #wrapper #wrap.login .sec01 .login_cont .id_box{margin:0 0 25px;}
 #wrapper #wrap.login .sec01 .login_cont .check_box{display: flex;align-items: center; margin: 25px 0;}
+#wrapper #wrap.login .sec01 .login_cont .check_box .check_input{display: flex;align-items: center;}
+#wrapper #wrap.login .sec01 .login_cont .check_box .check_input:first-child{margin-right: 10px;}
 #wrapper #wrap.login .sec01 input[type="text"]{display: block;width: 100%;height:50px;padding-left: 15px; border: 1px solid #c5c5c5;border-radius: 5px;}
 #wrapper #wrap.login .sec01 input[type="password"]{display: block;width: 100%;height:50px;padding-left: 15px; border: 1px solid #c5c5c5;border-radius: 5px;}
 #wrapper #wrap.login .sec01 label{font-size: 0.8rem;}
@@ -64,10 +72,12 @@ text-align: center;color: #FFFFFF;z-index: 999;}
 #wrapper #wrap.login .find_btn_2::after{display: inline-block;content: '';width: 1px;height:15px;margin:0 10px;background: #c5c5c5;}
 #wrapper #wrap.login .find_btn_3{}
 
+
 /*인증 페이지*/
 #wrapper #wrap.pass .title_box{}
 #wrapper #wrap.pass .title_box h4{margin-top: 25px;}
 #wrapper #wrap.pass .pass_btn{margin-top: 100px;}
+
 
 /*약관동의 페이지*/
 #wrapper #wrap.agree .agree_box{width:560px;margin:30px auto 0;padding: 20px 24px; border-radius: 12px; background: #F8F8F8;}
@@ -76,16 +86,10 @@ text-align: center;color: #FFFFFF;z-index: 999;}
 #wrapper #wrap.agree .agree_box .check_box .ch_div{margin: 10px 0;}
 #wrapper #wrap.agree .agree_box .info_text{}
 
+
 /*회원가입 페이지*/
 #wrapper #wrap.join .id_check_box {}
 #wrapper #wrap.join .id_check_box input[type="text"]{width: calc(100% - 80px);}
 #wrapper #wrap.join .overlap_btn{width: 75px;border: 1px solid #2f7bf2;border-radius: 5px;height: 45px;}
 #wrapper #wrap.join .btd_check_box{}
 #wrapper #wrap.join .btd_check_box input{width: 32.9%;}
-
-input{border: 1px solid #c5c5c5;border-radius: 5px;width:100%;height: 45px;}
-.num_check_box input[type="tel"]{width: 100%;}
-.sex_check_box{width: 100%;}
-.sel_box{display:inline-block; width: 49%;height:50px; border: 1px solid #d5d5d5;text-align: center;line-height: 50px;}
-.sel_box input[type="radio"]{display: none;}
-.red_text{color: #E83667;font-size: 13px;}

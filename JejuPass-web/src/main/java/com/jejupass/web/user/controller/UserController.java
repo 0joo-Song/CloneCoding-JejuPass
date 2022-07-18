@@ -96,7 +96,8 @@ public class UserController {
      * @throws Exception
      */
     @RequestMapping(value="/user/join_agree.do", method = {RequestMethod.GET, RequestMethod.POST})
- 	public String join_agree(Model model) throws Exception {
+ 	public String join_agree(Model model, UserReqDto userReqDto) throws Exception {
+    	model.addAttribute("data", userReqDto.getReqData());
  		return "web/user/join_agree";
     }	
     

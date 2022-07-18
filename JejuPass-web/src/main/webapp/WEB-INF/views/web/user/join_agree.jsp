@@ -15,16 +15,16 @@
                                 <label for="all_ch">전체 약관 동의</label>
                             </div>
                             <div class="check_box">
-                                <div class="check_1 ch_div">
-                                    <input type="checkbox" name="reqData.useAgree" id="check_01" value="N">
+                                <div class="check_1">
+                                    <input type="checkbox" class="ch_div" name="reqData.useAgree" id="check_01" value="N">
                                     <label for="check_01">[필수]이용약관 동의</label>
                                 </div>
-                                <div class="check_2 ch_div">
-                                    <input type="checkbox" name="reqData.infoAgree" id="check_02" value="N">
+                                <div class="check_2">
+                                    <input type="checkbox" class="ch_div" name="reqData.infoAgree" id="check_02" value="N">
                                     <label for="check_02">[필수]개인정보 취급방침 동의</label>
                                 </div>
-                                <div class="selec_ch ch_div">
-                                    <input type="checkbox" name="reqData.mktAgree" id="check_03" value="N">
+                                <div class="selec_ch">
+                                    <input type="checkbox" class="ch_div" name="reqData.mktAgree" id="check_03" value="N">
                                     <label for="check_03">[선택]마케팅 및 광고 활용 동의</label>
                                 </div>
                             </div>
@@ -56,9 +56,9 @@
 	        		});
         		}
         	});
+        	
         	$(".ch_div").change(function(){
-        		alert($('.ch_div').length+" | "+$('input[class="ch_div"]:checked').length);
-	        	if($('input[class="ch_div"]:checked').length == $('.ch_div').length){ 
+	        	if ($("input:checkbox[class='ch_div']:checked").length == 3){ 
 	               $('#all_ch').prop('checked',true);     
 	       		}else{       
 	       			$('#all_ch').prop('checked',false);     
@@ -88,7 +88,5 @@
         		alert("필수 약관에 동의해주세요.");
         		return false;
         	}
-        	
-        	//location.href="/user/join.do"
         }
         </script>
